@@ -1,8 +1,6 @@
-using System;
-
 namespace csharp_errors
 {
-    public class Calculator
+    public class Contact
 {
     public int Divide(int a, int b)
     {
