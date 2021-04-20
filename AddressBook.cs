@@ -1,11 +1,26 @@
+using System;
+using System.Collections.Generic;
+
 namespace csharp_errors
 {
     public class AddressBook
-{
-    public int Divide(int a, int b)
     {
-        return a / b;
+        /*
+          Dictionary with email as the 'string' Key and contact as the 'Contact' Value
+        */
+        private Dictionary<string, Contact> _contactList {get; set;} = new Dictionary<string, Contact>();
+        
+        /*
+          Methods
+        */
+        public void AddContact(Contact fooContact)
+        {
+            _contactList.Add(fooContact.Email, fooContact);
+        }
+
+        public Contact GetByEmail(string fooEmail)
+        {
+            return _contactList[$"{fooEmail}"];
+        }
     }
-    // ...other methods (e.g. Add(), Subtract(), Multiply())...
-}
 }
